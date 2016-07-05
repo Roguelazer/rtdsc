@@ -8,9 +8,14 @@ Usage
 =====
 
 ```python
+import time
 import rdtsc
 
 start = rdtsc.get_cycles()
 # do stuff
+time.sleep(5)
 end = rdtsc.get_cycles()
+frequency = rdtsc.get_cpu_frequency()
+
+print((end - start)/(frequency * 10 ** 6))
 ```
