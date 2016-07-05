@@ -23,3 +23,7 @@ so = ctypes.CDLL(path, use_errno=True)
 get_cycles = so.get_cycles
 get_cycles.argtypes = []
 get_cycles.restype = ctypes.c_ulonglong
+
+get_cpu_frequency = so.get_cpu_frequency
+get_cpu_frequency.argtypes = []
+get_cpu_frequency.restype = ctypes.c_double
